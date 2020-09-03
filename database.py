@@ -46,8 +46,8 @@ with app.app_context():
     activity2 = Activity(
         type= "Run",
         title= "Morning Run",
-        start_time = "2020-08-22 06:15:10",
-        end_time = "2020-08-22 07:30:05",
+        start_time = "2020-08-21 05:15:10",
+        end_time = "2020-08-21 07:30:05",
         distance = "6530",
         effort_level = "5",
         calories = 400,
@@ -139,12 +139,27 @@ with app.app_context():
     activity5.route = routes5
     activity5.user = user
 
+    activity6 = Activity(
+        type= "Run",
+        title= "Lunch Run",
+        start_time = "2020-08-26 11:15:10",
+        end_time = "2020-08-26 12:10:05",
+        distance = "6530",
+        effort_level = "3",
+        calories = 480,
+        pace = 11,
+    )
+
+    activity6.route = routes
+    activity6.user = user
+
 
     db.session.add(activity1)
     db.session.add(activity2)
     db.session.add(activity3)
     db.session.add(activity4)
     db.session.add(activity5)
+    db.session.add(activity6)
 
 
     db.session.commit()
