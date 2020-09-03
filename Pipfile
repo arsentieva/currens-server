@@ -16,6 +16,7 @@ flask-restx = "*"
 flask-jwt-extended = "*"
 flask-cors = "*"
 python-dotenv = "*"
+gunicorn = "*"
 
 [requires]
 python_version = "3.8"
