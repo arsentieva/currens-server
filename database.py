@@ -1,5 +1,5 @@
 from dotenv import load_dotenv
-from paths import path1, path2, path3, path4, path5
+from paths import path1, path2, path3, path4, path5, path6
 
 load_dotenv()
 
@@ -150,7 +150,17 @@ with app.app_context():
         pace = 11,
     )
 
-    activity6.route = routes
+    routes6 = []
+    for path in path6:
+        route6 = Route (
+            lat = path["lat"],
+            lng = path["lng"],
+            timestamp = "2020-08-18"
+        )
+        routes5.append(route6)
+
+
+    activity6.route = routes6
     activity6.user = user
 
 
