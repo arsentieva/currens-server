@@ -157,7 +157,7 @@ with app.app_context():
             lng = path["lng"],
             timestamp = "2020-08-18"
         )
-        routes5.append(route6)
+        routes6.append(route6)
 
 
     activity6.route = routes6
