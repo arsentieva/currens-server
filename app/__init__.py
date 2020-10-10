@@ -16,6 +16,7 @@ CORS(app)
 
 
 app.config.from_object(Configuration)
+app.config["JWT_ACCESS_TOKEN_EXPIRES"]=False
 db.init_app(app)
 jwt = JWTManager(app)
 
@@ -34,3 +35,8 @@ api.add_namespace(auth)
 api.add_namespace(activities)
 
 migrate = Migrate(app, db)
+
+# run only the last command
+# pipenv run flask db init
+# pipenv run flask db migrate -m 'first migration'
+# pipenv run flask db upgrade
